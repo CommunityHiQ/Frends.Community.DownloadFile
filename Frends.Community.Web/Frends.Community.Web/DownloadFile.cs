@@ -63,6 +63,10 @@ namespace Frends.Community.Web
             public string FilePath { get; set; }
         }
 
+        /// <summary>
+        /// Read contents as string for a single file. See: https://github.com/FrendsPlatform/Frends.File
+        /// </summary>
+        /// <returns>Object {string FilePath }  </returns>
         public static Output Execute(Parameters parameters, Options options)
         {
             using (var webClient = new WebClient())
