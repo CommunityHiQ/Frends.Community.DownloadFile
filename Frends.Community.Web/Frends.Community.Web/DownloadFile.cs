@@ -80,7 +80,7 @@ namespace Frends.Community.Web
                     var domainAndUserName = GetDomainAndUserName(options.UserName);
                     using (Impersonation.LogonUser(domainAndUserName[0], domainAndUserName[1], options.Password, LogonType.NewCredentials))
                     {
-
+                        webClient.DownloadFile(parameters.Address, parameters.DestinationFilePath);
                     }
                 }
                 else
