@@ -45,7 +45,7 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 | Property        | Type     | Description                      |
 |-----------------|----------|----------------------------------|
-| FilePath        | string   | Full path for the downloaded file|
+| FilePath        | string   | Full path of the downloaded file|
 
 
 
