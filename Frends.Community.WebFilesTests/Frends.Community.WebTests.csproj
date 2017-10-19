@@ -55,7 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Frends.Community.Web\Frends.Community.Web.csproj">
+    <ProjectReference Include="..\Frends.Community.WebFiles\Frends.Community.Web.csproj">
       <Project>{C5C08D36-2991-4FBF-99BB-55C442AB2C99}</Project>
       <Name>Frends.Community.Web</Name>
     </ProjectReference>
