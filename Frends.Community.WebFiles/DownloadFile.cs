@@ -9,7 +9,7 @@ using SimpleImpersonation;
 
 namespace Frends.Community.Web
 {
-    public static class DownloadFile
+    public static class WebFiles
     {
         public class HTTPHeader
         {
@@ -67,7 +67,7 @@ namespace Frends.Community.Web
         /// Read contents as string for a single file. See: https://github.com/FrendsPlatform/Frends.File
         /// </summary>
         /// <returns>Object {string FilePath }  </returns>
-        public static Output Execute(Parameters parameters, Options options)
+        public static Output DownloadFile(Parameters parameters, Options options)
         {
             using (var webClient = new WebClient())
             {
