@@ -30,7 +30,7 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 |---------------------|---------------------|-----------------------------------------------|-----------------------------|
 | Address             | string              | Exact address of the file to be downloaded    | `https://api.github.com/repos/foo/bar/zipball` |
 | DestinationFilePath | string              | Full path of the destination file             | `c:\temp\foo.txt`           |
-| Headers             | Array(string,string)| List of headers the webrequest should contain | `Authorization` `token xxx` |
+| Headers             | Array(string,string)| List of headers the webrequest should contain | `Authorization token` `xxx` |
 
 ### Options
 
