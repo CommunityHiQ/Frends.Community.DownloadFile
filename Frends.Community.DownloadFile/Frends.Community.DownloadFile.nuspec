@@ -3,14 +3,14 @@
   <metadata>
     <id>Frends.Community.DownloadFile</id>
     <version>0.9.8</version>
-    <title>FRENDS community DownloadFile Tasks</title>
+    <title>Frends.Community.DownloadFile</title>
     <authors>HiQ Finland</authors>
     <owners />
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>FRENDS community tasks for downloading files.</description>
+    <description>FRENDS community task for downloading files.</description>
     <summary />
     <dependencies>
-      <dependency id="SimpleImpersonation" version="2.*" />
+      <dependency id="SimpleImpersonation" version="[2,3)" />
     </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />
