@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Frends.Community.Web.Tests
+namespace Frends.Community.DownloadFile.Tests
 {
     [TestClass()]
     public class DownloadTests
