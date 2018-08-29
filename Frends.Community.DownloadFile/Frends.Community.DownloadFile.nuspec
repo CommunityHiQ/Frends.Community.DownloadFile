@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
-    <id>Frends.Community.Web</id>
-    <version>0.9.4</version>
-    <title>FRENDS community web tasks</title>
+    <id>Frends.Community.DownloadFile</id>
+    <version>0.9.8</version>
+    <title>FRENDS community DownloadFile Tasks</title>
     <authors>HiQ Finland</authors>
     <owners />
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>FRENDS community tasks for all web related things.</description>
+    <description>FRENDS community tasks for downloading files.</description>
     <summary />
     <dependencies>
-      <dependency id="SimpleImpersonation" version="2.0.1" />
+      <dependency id="SimpleImpersonation" version="2.*" />
     </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />
@@ -20,6 +20,7 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="bin\release\Frends.Community.Web.dll" target="lib\net450\Frends.Community.Web.dll" />
+    <file src="bin\release\Frends.Community.DownloadFile.dll" target="lib\net450\Frends.Community.DownloadFile.dll" />
+    <file src="bin\release\Frends.Community.DownloadFile.xml" target="lib\net450\Frends.Community.DownloadFile.xml" />
   </files>
 </package>
