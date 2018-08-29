@@ -5,6 +5,7 @@
     - [Parameters](#parameters)
     - [Options](#options)
     - [Result](#result)
+  - [Change Log](#change-log)
   - [License](#license)
 
 
@@ -47,7 +48,11 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 |-----------------|----------|----------------------------------|
 | FilePath        | string   | Full path of the downloaded file|
 
+## Change Log
 
+| Version             | Changes                 |
+| ---------------------| ---------------------|
+| 1.0.0 | Initial version of DownloadFile |
 
 ## License
 
