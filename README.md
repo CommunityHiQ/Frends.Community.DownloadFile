@@ -53,7 +53,6 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | Version             | Changes                 |
 | ---------------------| ---------------------|
 | 1.0.0 | Initial version of DownloadFile |
-| 1.0.1 | Changed SimpleImpersonation version to 3.0.0 |
 
 ## License
 
