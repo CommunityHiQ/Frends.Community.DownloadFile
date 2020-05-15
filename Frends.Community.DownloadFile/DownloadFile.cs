@@ -27,10 +27,7 @@ namespace Frends.Community.DownloadFile
                 if (options.UseGivenUserCredentialsForRemoteConnections)
                 {
                     var domainAndUserName = GetDomainAndUserName(options.UserName);
-                    using (Impersonation.LogonUser(domainAndUserName[0], domainAndUserName[1], options.Password, LogonType.NewCredentials))
-                    {
-                        webClient.DownloadFile(parameters.Address, parameters.DestinationFilePath);
-                    }
+                    Impersonation.RunAsUser(new UserCredentials(domainAndUserName[0], domainAndUserName[1], options.Password), LogonType.NewCredentials, () => webClient.DownloadFile(parameters.Address, parameters.DestinationFilePath));
                 }
                 else
                 {
