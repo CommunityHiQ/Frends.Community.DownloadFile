@@ -53,6 +53,7 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | Version             | Changes                 |
 | ---------------------| ---------------------|
 | 1.0.0 | Initial version of DownloadFile |
+| 1.0.8 | Task now support both SimpleImpersonation 2 and 3. |
 
 ## License
 
