@@ -1,18 +1,72 @@
-**[Table of Contents](http://tableofcontent.eu)**
-- [Frends.Community.Web.DownloadFile](#frendscommunitywebdownloadfile)
-  - [Contributing](#contributing)
-  - [Documentation](#documentation)
-    - [Parameters](#parameters)
-    - [Options](#options)
-    - [Result](#result)
-  - [Change Log](#change-log)
-  - [License](#license)
+# Frends.Community.DownloadFile
 
+FRENDS Community Task for DownloadFile
 
-# Frends.Community.Web.DownloadFile
-FRENDS Task that downloads a file from internet.
+[![Actions Status](https://github.com/CommunityHiQ/Frends.Community.DownloadFile/workflows/PackAndPushAfterMerge/badge.svg)](https://github.com/CommunityHiQ/Frends.Community.DownloadFile/actions) ![MyGet](https://img.shields.io/myget/frends-community/v/Frends.Community.DownloadFile) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-## Contributing
+- [Installing](#installing)
+- [Tasks](#tasks)
+     - [DownloadFile](#DownloadFile)
+- [Building](#building)
+- [Contributing](#contributing)
+- [Change Log](#change-log)
+
+# Installing
+
+You can install the task via FRENDS UI Task View or you can find the NuGet package from the following NuGet feed
+https://www.myget.org/F/frends-community/api/v3/index.json and in Gallery view in MyGet https://www.myget.org/feed/frends-community/package/nuget/Frends.Community.DownloadFile
+
+# Tasks
+
+## DownloadFile
+
+Repeats message
+
+### Properties
+
+| Property | Type | Description | Example |
+| -------- | -------- | -------- | -------- |
+| Message | `string` | Some string that will be repeated. | `foo` |
+
+### Options
+
+| Property | Type | Description | Example |
+| -------- | -------- | -------- | -------- |
+| Amount | `int` | Amount how many times message is repeated. | `3` |
+| Delimiter | `string` | Character(s) used between replications. | `, ` |
+
+### Returns
+
+A result object with parameters.
+
+| Property | Type | Description | Example |
+| -------- | -------- | -------- | -------- |
+| Replication | `string` | Repeated string. | `foo, foo, foo` |
+
+Usage:
+To fetch result use syntax:
+
+`#result.Replication`
+
+# Building
+
+Clone a copy of the repo
+
+`git clone https://github.com/CommunityHiQ/Frends.Community.DownloadFile.git`
+
+Rebuild the project
+
+`dotnet build`
+
+Run Tests
+
+`dotnet test`
+
+Create a NuGet package
+
+`dotnet pack --configuration Release`
+
+# Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
 1. Fork the repo on GitHub
@@ -23,38 +77,8 @@ When contributing to this repository, please first discuss the change you wish t
 
 NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
-## Documentation
+# Change Log
 
-### Parameters
-
-| Property            |  Type               | Description                                   | Example                     |
-|---------------------|---------------------|-----------------------------------------------|-----------------------------|
-| Address             | string              | Exact address of the file to be downloaded    | `https://api.github.com/repos/foo/bar/zipball` |
-| DestinationFilePath | string              | Full path of the destination file             | `c:\temp\foo.txt`           |
-| Headers             | Array(string,string)| List of headers the webrequest should contain | `Authorization token` `xxx` |
-
-### Options
-
-| Property                                    | Type           | Description                                    | Example                   |
-|---------------------------------------------|----------------|------------------------------------------------|---------------------------|
-| AllowInvalidCertificate                     | bool           | If set, allows invalid SSL certificates
-| UseGivenUserCredentialsForRemoteConnections | bool           | If set, allows you to give the user credentials when downloading file to a remote host. If not set, the agent service user credentials will be used.| |
-| UserName                                    | string         | Needs to be of format domain\username | `example\Admin` |
-| Password                                    | string         | | |
-
-### Result
-
-| Property        | Type     | Description                      |
-|-----------------|----------|----------------------------------|
-| FilePath        | string   | Full path of the downloaded file|
-
-## Change Log
-
-| Version             | Changes                 |
-| ---------------------| ---------------------|
-| 1.0.0 | Initial version of DownloadFile |
-| 1.0.9 | Task now support SimpleImpersonation version 3. |
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details
+| Version | Changes |
+| ------- | ------- |
+| 0.0.1   | Development stil going on. |

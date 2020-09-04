@@ -1,5 +1,8 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Net;
+using System.Threading;
+using Microsoft.CSharp; // You can remove this if you don't need dynamic type in .Net Standard tasks
 using SimpleImpersonation;
 
 #pragma warning disable 1591
@@ -12,7 +15,7 @@ namespace Frends.Community.DownloadFile
         /// Read contents as string for a single file. See: https://github.com/FrendsPlatform/Frends.File
         /// </summary>
         /// <returns>Object {string FilePath }  </returns>
-        public static Output DownloadFile(Parameters parameters, Options options)
+        public static Result DownloadFile(Parameters parameters, Options options)
         {
             using (var webClient = new WebClient())
             {
@@ -35,7 +38,7 @@ namespace Frends.Community.DownloadFile
                 }
             }
 
-            return new Output() { FilePath = parameters.DestinationFilePath };
+            return new Result() { FilePath = parameters.DestinationFilePath };
 
         }
         private static string[] GetDomainAndUserName(string username)
