@@ -1,6 +1,6 @@
 # Frends.Community.DownloadFile
 
-FRENDS Community Task for DownloadFile
+FRENDS Community Task to download a file from internet
 
 [![Actions Status](https://github.com/CommunityHiQ/Frends.Community.DownloadFile/workflows/PackAndPushAfterMerge/badge.svg)](https://github.com/CommunityHiQ/Frends.Community.DownloadFile/actions) ![MyGet](https://img.shields.io/myget/frends-community/v/Frends.Community.DownloadFile) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
@@ -20,33 +20,35 @@ https://www.myget.org/F/frends-community/api/v3/index.json and in Gallery view i
 
 ## DownloadFile
 
-Repeats message
+Downloads a file from internet.
 
 ### Properties
 
-| Property | Type | Description | Example |
-| -------- | -------- | -------- | -------- |
-| Message | `string` | Some string that will be repeated. | `foo` |
+| Property            |  Type               | Description                                   | Example                     |
+|---------------------|---------------------|-----------------------------------------------|-----------------------------|
+| Address             | string              | Exact address of the file to be downloaded    | `https://api.github.com/repos/foo/bar/zipball` |
+| DestinationFilePath | string              | Full path of the destination file             | `c:\temp\foo.txt`           |
+| Headers             | Array(string,string)| List of headers the webrequest should contain | `Authorization token` `xxx` |
 
 ### Options
 
-| Property | Type | Description | Example |
-| -------- | -------- | -------- | -------- |
-| Amount | `int` | Amount how many times message is repeated. | `3` |
-| Delimiter | `string` | Character(s) used between replications. | `, ` |
+| Property                                    | Type           | Description                                    | Example                   |
+|---------------------------------------------|----------------|------------------------------------------------|---------------------------|
+| AllowInvalidCertificate                     | bool           | If set, allows invalid SSL certificates
+| UseGivenUserCredentialsForRemoteConnections | bool           | If set, allows you to give the user credentials when downloading file to a remote host. If not set, the agent service user credentials will be used.| |
+| UserName                                    | string         | Needs to be of format domain\username | `example\Admin` |
+| Password                                    | string         | | |
 
 ### Returns
 
-A result object with parameters.
-
-| Property | Type | Description | Example |
-| -------- | -------- | -------- | -------- |
-| Replication | `string` | Repeated string. | `foo, foo, foo` |
+| Property        | Type     | Description                      |
+|-----------------|----------|----------------------------------|
+| FilePath        | string   | Full path of the downloaded file|
 
 Usage:
 To fetch result use syntax:
 
-`#result.Replication`
+`#result.DownloadFile`
 
 # Building
 
@@ -58,9 +60,9 @@ Rebuild the project
 
 `dotnet build`
 
-Run Tests
+Testing
 
-`dotnet test`
+No tests defined for DownloadFile task.
 
 Create a NuGet package
 
@@ -79,6 +81,8 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 # Change Log
 
-| Version | Changes |
-| ------- | ------- |
-| 0.0.1   | Development stil going on. |
+| Version | Changes                                         |
+| --------| ------------------------------------------------|
+| 1.0.0   | Initial version of DownloadFile                 |
+| 1.0.9   | Task now support SimpleImpersonation version 3. |
+| 1.0.10  | Converted to support .Net Standard & .Net 4.7.1 |
