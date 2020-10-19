@@ -22,7 +22,7 @@ https://www.myget.org/F/frends-community/api/v3/index.json and in Gallery view i
 
 Downloads a file from internet.
 
-### Properties
+### Parameters
 
 | Property            |  Type               | Description                                   | Example                     |
 |---------------------|---------------------|-----------------------------------------------|-----------------------------|
