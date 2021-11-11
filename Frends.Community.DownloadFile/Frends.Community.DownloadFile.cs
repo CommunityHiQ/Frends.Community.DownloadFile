@@ -15,7 +15,7 @@ namespace Frends.Community.DownloadFile
         /// Read contents as string for a single file. See: https://github.com/FrendsPlatform/Frends.File
         /// </summary>
         /// <returns>Object {string FilePath }  </returns>
-        public static Result DownloadFile(Parameters parameters, Options options)
+        public static Result DownloadFile([PropertyTab]Parameters parameters, [PropertyTab]Options options)
         {
             using (var webClient = new WebClient())
             {
