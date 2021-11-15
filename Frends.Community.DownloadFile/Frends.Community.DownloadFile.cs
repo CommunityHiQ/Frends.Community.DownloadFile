@@ -1,8 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Net;
-using System.Threading;
-using Microsoft.CSharp; // You can remove this if you don't need dynamic type in .Net Standard tasks
 using SimpleImpersonation;
 
 #pragma warning disable 1591
@@ -19,9 +17,12 @@ namespace Frends.Community.DownloadFile
         {
             using (var webClient = new WebClient())
             {
-                foreach (var header in parameters.Headers)
+                if (parameters.Headers != null)
                 {
-                    webClient.Headers.Add(header.Name, header.Value);
+                    foreach (var header in parameters.Headers)
+                    {
+                        webClient.Headers.Add(header.Name, header.Value);
+                    }
                 }
 
                 if (options.AllowInvalidCertificate)
