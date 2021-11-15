@@ -62,7 +62,7 @@ Rebuild the project
 
 Testing
 
-No tests defined for DownloadFile task.
+`dotnet test`
 
 Create a NuGet package
 
