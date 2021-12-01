@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Net;
 using SimpleImpersonation;
 
@@ -12,13 +13,16 @@ namespace Frends.Community.DownloadFile
         /// Read contents as string for a single file. See: https://github.com/FrendsPlatform/Frends.File
         /// </summary>
         /// <returns>Object {string FilePath }  </returns>
-        public static Output DownloadFile(Parameters parameters, Options options)
+        public static Result DownloadFile([PropertyTab]Parameters parameters, [PropertyTab]Options options)
         {
             using (var webClient = new WebClient())
             {
-                foreach (var header in parameters.Headers)
+                if (parameters.Headers != null)
                 {
-                    webClient.Headers.Add(header.Name, header.Value);
+                    foreach (var header in parameters.Headers)
+                    {
+                        webClient.Headers.Add(header.Name, header.Value);
+                    }
                 }
 
                 if (options.AllowInvalidCertificate)
@@ -35,7 +39,7 @@ namespace Frends.Community.DownloadFile
                 }
             }
 
-            return new Output() { FilePath = parameters.DestinationFilePath };
+            return new Result() { FilePath = parameters.DestinationFilePath };
 
         }
         private static string[] GetDomainAndUserName(string username)

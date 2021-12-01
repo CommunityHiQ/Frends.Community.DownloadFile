@@ -1,29 +1,26 @@
-**[Table of Contents](http://tableofcontent.eu)**
-- [Frends.Community.Web.DownloadFile](#frendscommunitywebdownloadfile)
-  - [Contributing](#contributing)
-  - [Documentation](#documentation)
-    - [Parameters](#parameters)
-    - [Options](#options)
-    - [Result](#result)
-  - [Change Log](#change-log)
-  - [License](#license)
+# Frends.Community.DownloadFile
 
+FRENDS Community Task to download a file from internet
 
-# Frends.Community.Web.DownloadFile
-FRENDS Task that downloads a file from internet.
+[![Actions Status](https://github.com/CommunityHiQ/Frends.Community.DownloadFile/workflows/PackAndPushAfterMerge/badge.svg)](https://github.com/CommunityHiQ/Frends.Community.DownloadFile/actions) ![MyGet](https://img.shields.io/myget/frends-community/v/Frends.Community.DownloadFile) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-## Contributing
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+- [Installing](#installing)
+- [Tasks](#tasks)
+     - [DownloadFile](#DownloadFile)
+- [Building](#building)
+- [Contributing](#contributing)
+- [Change Log](#change-log)
 
-1. Fork the repo on GitHub
-2. Clone the project to your own machine
-3. Commit changes to your own branch
-4. Push your work back up to your fork
-5. Submit a Pull request so that we can review your changes
+# Installing
 
-NOTE: Be sure to merge the latest from "upstream" before making a pull request!
+You can install the task via FRENDS UI Task View or you can find the NuGet package from the following NuGet feed
+https://www.myget.org/F/frends-community/api/v3/index.json and in Gallery view in MyGet https://www.myget.org/feed/frends-community/package/nuget/Frends.Community.DownloadFile
 
-## Documentation
+# Tasks
+
+## DownloadFile
+
+Downloads a file from internet.
 
 ### Parameters
 
@@ -42,19 +39,50 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | UserName                                    | string         | Needs to be of format domain\username | `example\Admin` |
 | Password                                    | string         | | |
 
-### Result
+### Returns
 
 | Property        | Type     | Description                      |
 |-----------------|----------|----------------------------------|
 | FilePath        | string   | Full path of the downloaded file|
 
-## Change Log
+Usage:
+To fetch result use syntax:
 
-| Version             | Changes                 |
-| ---------------------| ---------------------|
-| 1.0.0 | Initial version of DownloadFile |
-| 1.0.9 | Task now support SimpleImpersonation version 3. |
+`#result.DownloadFile`
 
-## License
+# Building
 
-This project is licensed under the MIT License - see the LICENSE file for details
+Clone a copy of the repo
+
+`git clone https://github.com/CommunityHiQ/Frends.Community.DownloadFile.git`
+
+Rebuild the project
+
+`dotnet build`
+
+Testing
+
+`dotnet test`
+
+Create a NuGet package
+
+`dotnet pack --configuration Release`
+
+# Contributing
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+
+1. Fork the repo on GitHub
+2. Clone the project to your own machine
+3. Commit changes to your own branch
+4. Push your work back up to your fork
+5. Submit a Pull request so that we can review your changes
+
+NOTE: Be sure to merge the latest from "upstream" before making a pull request!
+
+# Change Log
+
+| Version | Changes                                         |
+| --------| ------------------------------------------------|
+| 1.0.0   | Initial version of DownloadFile                 |
+| 1.0.9   | Task now support SimpleImpersonation version 3. |
+| 1.0.10  | Converted to support .Net Standard & .Net 4.7.1 |
