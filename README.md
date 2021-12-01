@@ -86,3 +86,4 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | 1.0.0   | Initial version of DownloadFile                 |
 | 1.0.9   | Task now support SimpleImpersonation version 3. |
 | 1.0.10  | Converted to support .Net Standard & .Net 4.7.1 |
+| 1.0.11  | Fixed release workflow in CI                    |
